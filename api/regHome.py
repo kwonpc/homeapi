@@ -8,7 +8,7 @@ router = APIRouter(
 )
 
 
-@router.put("/")
+@router.put("/", description="매물 등록 API")
 async def regHome(item_request: items.HomeItem):
     home_collection = config.client.home.home
     home_item_dict = item_request.dict()

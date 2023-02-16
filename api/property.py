@@ -12,7 +12,7 @@ router = APIRouter(
 )
 
 
-@router.get("/{location}/{period}")
+@router.get("/{location}/{period}", description="매물 리스트 조회 API")
 async def property(location: items.Location, period: items.Period, date: Optional[datetime.date] = None):
 
     req = {"location": location, "period": period}
